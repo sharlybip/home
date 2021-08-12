@@ -1,0 +1,62 @@
+.main {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: $color-black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-terciary;
+    border: 2px solid $color-secondary;
+
+    &-title {
+        margin: 10px 20px;
+    }
+    p {
+        max-width: 600px;
+        font-family: $Fuente2;
+        @include font-size(30px);
+        margin: 0 auto;
+        text-align: center;
+        strong{
+            color: $color-secondary;
+        }
+        span {
+            color: #eeff00;
+        }
+    }
+    .main-explora {
+        @include font-size(50px);
+        color: $color-clear;
+    }
+}
+.cards__container{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    color: $color-black;
+    font-size: 20px;
+    background-color: $color-clear;
+    display: flex;
+    flex-direction: column;
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        figure{
+            width: 100%;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+        .button{
+            display: block;
+            @include font-size(20px);
+            text-decoration: none;
+        }   
+    }
+    }
+    
