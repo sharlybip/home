@@ -1,3 +1,12 @@
+mixin card(titulo, titulo2, parrafo, ruta, alt, page)
+    .card 
+        h1=titulo
+        h2=titulo2
+        div
+            p=parrafo
+            figure
+                img(src=""+ruta, alt=""+alt)
+        a(class="button" href=""+page, target="blank") Vista el proyecto
 doctype html
 html(lang="en")
     head
@@ -22,17 +31,25 @@ html(lang="en")
                     li contacto
                     li blog
             .header-menu: img(src="../images/menuham.png", alt="menu")
-                        
-        main.main
-            h1.main-title ¡Hola Binevenido!
-            p.main-description
-                | Soy Carlos <strong>@sharlybip</strong>  y este mi camino para ser un 
-                | <strong>desarrollador web</strong> 
-                | he empezado desde lo mas basico que es html y css 
-                | nativos, entendiendo cómo fucionan para de a poco ir creciendo hacia lo 
-                | que se maneja en la industria en la actualidad como los preprocesadores,
-                | librerias de <span>JavaScript</span>, Frameworks etcétera.
-            p.main-explora ¡Explora todos mis proyectos! 
-            p 
-                | Toma en cuenta que algunos son muy básicos
+        main
+            section.main
+                h1.main-title ¡Hola Binevenido!
+                p.main-description
+                    | Soy Carlos <strong>@sharlybip</strong>  y este mi camino para ser un 
+                    | <strong>desarrollador web</strong> 
+                    | he empezado desde lo mas basico que es html y css 
+                    | nativos, entendiendo cómo fucionan para de a poco ir creciendo hacia lo 
+                    | que se maneja en la industria en la actualidad como los preprocesadores,
+                    | librerias de <span>JavaScript</span>, Frameworks etcétera.
+                p.main-explora ¡Explora todos mis proyectos! 
+                p 
+                    | Toma en cuenta que algunos son muy básicos
+            section.cards__container
+
+                +card('Git & github','second title','En el curso de Git y Github aprendí a utilizar primero la consola (emulador unix) con ubuntu, aprendi con un curso muy amigable con un profesor entusiasta a moverte dentro de la consola con los principales comandos, y hasa visitar paginas web desde la consola; viendo paginas de solo texto. Despues inicie git. Git se maneja totalmente en la consola aprendia a iniciar un "repo", agragar archivos al repositorio haciendo commits, crear ramas y hacer merge, y el siguiemte paso es hacer tu cuenta de github y conectarla con tu repositorio local obviamnete todo por consola, aprendí a hacer pull y push para cargar los archivos que se modificaron, para poder asi compartir tus proyectos en la red social mas grande de developers en el mundo.','../images/git-github.png','Imagen de git y github','https://github.com/sharlybip')
+                +card('','','','','')
+                +card('','','','','')
+                +card('','','','','')
+                +card('','','','','')
+                +card('','','','','')
         footer.footer
