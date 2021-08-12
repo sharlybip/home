@@ -6,7 +6,10 @@ $color-primary: #ce0505;
 $color-secondary: #ffa600;
 $color-terciary: #bbc0c2;
 $color-cuaternary: #eeff00;;
-
+@mixin caja {
+	color: $color-black;
+	box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.20);
+}
 @function calculateRem($size) {
 	$remSize: $size / 16px;
 	@return $remSize * 1rem;
